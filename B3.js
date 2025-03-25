@@ -4,10 +4,8 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  // Lấy dữ liệu người dùng từ localStorage
   const users = JSON.parse(localStorage.getItem('users')) || [];
 
-  // Kiểm tra tài khoản
   const validUser = users.find(user => user.email === email && user.password === password);
 
   if (!email || !password) {
